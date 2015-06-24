@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Interfaces;
 using DataAccess.DataContracts;
+using DataAccess.DataModels;
 using DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -58,7 +59,8 @@ namespace SolutiaCMS.Controllers
             }
         }
 
-       public HttpResponseMessage Put(ICompany company)
+       [HttpPut]
+       public HttpResponseMessage Put(Company company)
         {
             try
             {

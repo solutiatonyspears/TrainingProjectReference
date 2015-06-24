@@ -19,7 +19,27 @@ namespace DataAccess.Repositories
 
         public DataContracts.ICompany UpdateCompany(DataContracts.ICompany company)
         {
-            throw new NotImplementedException();
+           
+
+            using(var connection = new SqlConnection(base.ConnectionString))
+            {
+                connection.Open();
+                using(var command = new SqlCommand("UPDATE COMPANY SET NAME = @Name, ADDRESS1 = @Address1, ADDRESS2 = @Address2, CITY = @City, STATEID = @StateID, ZIP = @Zip, PHONENUMBER = @PhoneNumber WHERE CompanyID = @CompanyID", connection))
+                {
+                    command.Parameters.AddWithValue("@Name", company.Name);
+                    command.Parameters.AddWithValue("@Address1", company.Address.Street1);
+                    command.Parameters.AddWithValue("@Address2", company.Address.Street2);
+                    command.Parameters.AddWithValue("@City", company.Address.City);
+                    command.Parameters.AddWithValue("@StateId", company.Address.StateCode);
+                    command.Parameters.AddWithValue("@Zip", company.Address.PostalCode);
+                    command.Parameters.AddWithValue("@PhoneNumber", company.PhoneNumber);
+                    command.Parameters.AddWithValue("@CompanyId", company.CompanyId);
+
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            return company;
         }
 
         public void DeleteCompany(int companyId)
@@ -51,6 +71,7 @@ namespace DataAccess.Repositories
                         company.Address.PostalCode = Convert.ToString(reader["Zip"]);
                         company.Address.StateCode = Convert.ToString(reader["StateId"]);
                         company.CompanyId = Convert.ToInt32(reader["CompanyId"]);
+                        company.PhoneNumber = Convert.ToString(reader["PhoneNumber"]);
                     }
                     
                 }
