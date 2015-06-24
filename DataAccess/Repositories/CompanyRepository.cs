@@ -10,7 +10,7 @@ using DataAccess.DataModels;
 
 namespace DataAccess.Repositories
 {
-  public class CompanyRepository : ICompanyRepository
+  public class CompanyRepository : Repository, ICompanyRepository
     {
         public DataContracts.ICompany AddCompany(DataContracts.ICompany company)
         {
@@ -29,10 +29,10 @@ namespace DataAccess.Repositories
 
         public DataContracts.ICompany GetCompanyById(int companyId)
         {
-            var connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+           
             Company company = null;
 
-            using (var connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(base.ConnectionString))
             {
                 connection.Open();
 
