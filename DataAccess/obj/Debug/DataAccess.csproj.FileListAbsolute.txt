@@ -1,0 +1,51 @@
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\System.Data.Common.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\System.Data.SqlClient.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\System.Globalization.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\System.IO.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\System.Runtime.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\System.Text.Encoding.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\System.Threading.Tasks.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS\DataAccess\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Data.Common.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Globalization.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.IO.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Runtime.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Text.Encoding.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Threading.Tasks.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Web.Http.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Cory Arneson\Documents\DataAccess\bin\Debug\System.Web.Http.xml
+C:\Users\Cory Arneson\Documents\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Cory Arneson\Documents\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Cory Arneson\Documents\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Data.Common.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Globalization.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.IO.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Runtime.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Text.Encoding.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Threading.Tasks.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Web.Http.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Web.Http.xml
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Cory Arneson\Documents\Projects\DataAccess\obj\Debug\DataAccess.pdb

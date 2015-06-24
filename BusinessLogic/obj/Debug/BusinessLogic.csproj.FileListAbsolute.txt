@@ -1,0 +1,14 @@
+C:\Users\Cory Arneson\Documents\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\Cory Arneson\Documents\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\Cory Arneson\Documents\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\Cory Arneson\Documents\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\Cory Arneson\Documents\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Cory Arneson\Documents\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\Cory Arneson\Documents\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\obj\Debug\BusinessLogic.pdb
