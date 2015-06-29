@@ -69,7 +69,7 @@ namespace CompanyControllerTests
             ICompany company;
             Assert.IsTrue(response.TryGetContentValue<ICompany>(out company));
             company.Name = "ABCD Plumbing";
-            controller.Put(company);
+            controller.Put((Company)company);
 
             response = controller.Get(1);
             Assert.IsTrue(response.TryGetContentValue<ICompany>(out company));

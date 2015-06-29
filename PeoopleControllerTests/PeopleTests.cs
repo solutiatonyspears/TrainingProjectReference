@@ -47,7 +47,7 @@ namespace PeopleControllerTests
             IPerson person;
             Assert.IsTrue(response.TryGetContentValue<IPerson>(out person));
             person.FirstName = "Tony";
-            controller.Put(person);
+            controller.Put((Person)person);
 
             response = controller.Get(1);
             Assert.IsTrue(response.TryGetContentValue<IPerson>(out person));

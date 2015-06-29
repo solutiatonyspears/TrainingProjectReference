@@ -45,7 +45,7 @@ namespace BusinessLogic.DTOs
             set;
         }
 
-        public int Personid
+        public IPerson Person
         {
             get;
             set;

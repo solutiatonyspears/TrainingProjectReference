@@ -10,7 +10,7 @@ namespace DataAccess.DataContracts
     {
         int EmployeeId { get; set; }
         int CompanyId { get; set; }
-        int Personid { get; set; }
+        IPerson Person { get; set; }
         DateTime HireDate { get; set; }
         DateTime? TerminationDate { get; set; }
         bool IsActive { get; set; }

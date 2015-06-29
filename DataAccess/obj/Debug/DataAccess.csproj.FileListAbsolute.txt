@@ -49,3 +49,22 @@ C:\Users\Cory Arneson\Documents\Projects\DataAccess\bin\Debug\System.Web.Http.xm
 C:\Users\Cory Arneson\Documents\Projects\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Cory Arneson\Documents\Projects\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Cory Arneson\Documents\Projects\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Data.Common.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Data.SqlClient.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Globalization.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.IO.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Runtime.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Text.Encoding.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Threading.Tasks.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Web.Http.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\bin\Debug\System.Web.Http.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

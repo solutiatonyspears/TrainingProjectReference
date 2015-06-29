@@ -11,5 +11,6 @@ namespace DataAccess.DataModels
     {
         public int ProjectId { get; set; }
         public int EmployeeId { get; set; }
+        public IPerson Person { get; set; }
     }
 }

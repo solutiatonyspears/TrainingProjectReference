@@ -11,16 +11,16 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
-    public class USStatesRepository:DataRepository, IUSStatesRepository
+    public class USStatesRepository:Repository, IUSStatesRepository
     {
-        public USStatesRepository():base(ConnectionProvider.ConnectionString)
+        public USStatesRepository()
         {}
 
-        public IList<DataContracts.IUSState> GetAllStates()
+        public IEnumerable<DataContracts.IUSState> GetAllStates()
         {
             var stateList = new List<IUSState>();
 
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(base.ConnectionString))
             {
                 connection.Open();
 

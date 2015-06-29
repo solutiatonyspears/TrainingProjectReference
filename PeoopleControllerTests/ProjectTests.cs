@@ -18,7 +18,7 @@ namespace PeoopleControllerTests
     {
         public ProjectController CreateMockProjectController()
         {
-            var controller = new ProjectController(new MockProjectRepository());
+            var controller = new ProjectController(new MockProjectBusinessLogic());
             controller.Request = new HttpRequestMessage();
             controller.Configuration = new HttpConfiguration();
             return controller;
@@ -57,7 +57,7 @@ namespace PeoopleControllerTests
             Assert.IsTrue(response.TryGetContentValue<IProject>(out project));
             project.Name = "Edited Project";
 
-            controller.Put(project);
+            controller.Put((Project)project);
 
             response = controller.Get(1);
             Assert.IsTrue(response.TryGetContentValue<IProject>(out project));

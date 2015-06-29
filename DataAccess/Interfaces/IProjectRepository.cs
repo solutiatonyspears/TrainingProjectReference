@@ -14,6 +14,9 @@ namespace DataAccess.Interfaces
         IProject UpdateProject(IProject project);
         IEnumerable<IProject> Search(ProjectSearchParameters parameters);
         void DeleteProject(int projectId);
-        List<IProject> GetProjectsForCompanyId(int companyId);
+        IEnumerable<IProject> GetProjectsForCompanyId(int companyId);
+        void AddEmployeeToProject(int employeeId, int projectId);
+        void RemoveEmployeeFromProject(int employeeId, int projectId);
+        IEnumerable<IEmployeeProjectAssignment> GetEmployeesAssignedToProject(int projectId);
     }
 }

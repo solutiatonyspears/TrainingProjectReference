@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Interfaces;
+using DataAccess;
 using DataAccess.DataContracts;
 using DataAccess.DataModels;
 using DataAccess.Interfaces;
@@ -16,20 +17,24 @@ namespace SolutiaCMS.Controllers
     {
         private ICompanyBusinessLogic _companyBusinessLogic;
         
-
         public CompanyController()
         { }
+
+        protected Uri CreateResourceUri(ICompany company)
+        {
+            string uri = Url.Link("DefaultApi", new { id = company.CompanyId });
+            return new Uri(uri);
+        }
 
         public CompanyController(ICompanyBusinessLogic companyBusinessLogic)
         {
             _companyBusinessLogic = companyBusinessLogic;
-            
         }
 
         [Route("{companyId}")]
-        public HttpResponseMessage Get(int companyID)
+        public HttpResponseMessage Get(int companyId)
         {
-            var company = _companyBusinessLogic.GetCompanyById(companyID);
+            var company = _companyBusinessLogic.GetCompanyById(companyId);
 
             if(company != null)
             {
@@ -41,15 +46,24 @@ namespace SolutiaCMS.Controllers
             }
         }
 
-        public HttpResponseMessage Post(ICompany company)
+        [HttpGet]
+        [Route("search")]
+        public HttpResponseMessage Search([FromUri]CompanySearchParameters parameters)
+        {
+            var companies = _companyBusinessLogic.SearchForCompanies(parameters);
+
+            return Request.CreateResponse(companies);
+        }
+
+        [HttpPost]
+        public HttpResponseMessage Post(Company company)
         {
             try
             {
                 var newCompany = _companyBusinessLogic.CreateCompany(company);
 
                 var response = Request.CreateResponse(HttpStatusCode.Created, newCompany);
-                string uri = Url.Link("DefaultApi", new { id = company.CompanyId });
-                response.Headers.Location = new Uri(uri);
+                response.Headers.Location = CreateResourceUri(company);
 
                 return response;
             }
@@ -66,9 +80,7 @@ namespace SolutiaCMS.Controllers
             {
                 var updatedCompany = _companyBusinessLogic.UpdateCompany(company);
                 var response = Request.CreateResponse(HttpStatusCode.OK, updatedCompany);
-
-                string uri = Url.Link("DefaultApi", new { id = company.CompanyId });
-                response.Headers.Location = new Uri(uri);
+                response.Headers.Location = CreateResourceUri(company);
 
                 return response;
             }
@@ -78,18 +90,23 @@ namespace SolutiaCMS.Controllers
             }
         }
 
-        public HttpResponseMessage Delete(int companyId)
+       [HttpDelete]
+       [Route("{companyId}")]
+       public HttpResponseMessage Delete(int companyId)
        {
            _companyBusinessLogic.DeleteCompany(companyId);
+
            var response = Request.CreateResponse(HttpStatusCode.OK);
+           
            return response;
        }
 
+        [HttpPost]
+        [Route("{companyId}/employee/{employeeId}")]
         public HttpResponseMessage AddEmployee(int companyId, int employeeId)
         {
             try 
 	        {
-
                 if (_companyBusinessLogic.AddEmployee(employeeId, companyId))
                 {
 
@@ -107,6 +124,8 @@ namespace SolutiaCMS.Controllers
            }
         }
 
+        [HttpDelete]
+        [Route("{companyId}/employee/{employeeId}")]
         public HttpResponseMessage RemoveEmployee(int companyId, int employeeId)
         {
             try{
@@ -120,7 +139,9 @@ namespace SolutiaCMS.Controllers
             }
         }
 
-        public HttpResponseMessage GetAllEmployeeIds(int companyId)
+        [HttpGet]
+        [Route("{companyId}/employeeIds/all")]
+        public HttpResponseMessage GetAllEmployeeIdsForCompany(int companyId)
         {
 
             var employeeList = _companyBusinessLogic.GetAllEmployeeIds(companyId);
@@ -129,11 +150,21 @@ namespace SolutiaCMS.Controllers
             
         }
 
-        public HttpResponseMessage GetAllEmployees(int companyId)
-        {
-            
+        [HttpGet]
+        [Route("{companyId}/employees/all")]
+        public HttpResponseMessage GetAllEmployeesForCompany(int companyId)
+        {            
             var employeeList = _companyBusinessLogic.GetAllEmployees(companyId);
             var response = Request.CreateResponse(HttpStatusCode.OK, employeeList);
+            return response;
+        }
+
+        [HttpGet]
+        [Route("{companyId}/projects/all")]
+        public HttpResponseMessage GetAllProjectsForCompany(int companyId)
+        {
+            var projectList = _companyBusinessLogic.GetProjectsForCompany(companyId);
+            var response = Request.CreateResponse(HttpStatusCode.OK, projectList);
             return response;
         }
     }

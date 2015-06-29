@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.DTOs;
+using DataAccess;
 using DataAccess.DataContracts;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,9 @@ namespace BusinessLogic.Interfaces
          ICompany DeleteCompany(int companyId);
          bool AddEmployee(int employeeId, int companyId);
          bool RemoveEmployee(int employeeId, int companyId);
-         List<int> GetAllEmployeeIds(int companyId);
-         List<PersonEmployee> GetAllEmployees(int companyId);
-        
+         IEnumerable<int> GetAllEmployeeIds(int companyId);
+         IEnumerable<IEmployee> GetAllEmployees(int companyId);
+         IEnumerable<ICompany> SearchForCompanies(CompanySearchParameters parameters);
+         IEnumerable<IProject> GetProjectsForCompany(int companyId);
     }
 }

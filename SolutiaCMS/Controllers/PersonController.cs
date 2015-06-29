@@ -1,4 +1,6 @@
-﻿using DataAccess.DataContracts;
+﻿using DataAccess;
+using DataAccess.DataContracts;
+using DataAccess.DataModels;
 using DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ using System.Web.Http;
 
 namespace SolutiaCMS.Controllers
 {
+    [RoutePrefix("api/person")]
     public class PersonController:ApiController
     {
         IPersonRepository _repository;
@@ -19,6 +22,8 @@ namespace SolutiaCMS.Controllers
             _repository = repository;
         }
 
+        [HttpGet]
+        [Route("{personId}")]
         public HttpResponseMessage Get(int personId)
         {
             var person = _repository.GetPersonById(personId);
@@ -33,7 +38,8 @@ namespace SolutiaCMS.Controllers
             }
         }
         
-        public HttpResponseMessage Put(IPerson person)
+        [HttpPut]
+        public HttpResponseMessage Put(Person person)
         {
             try
             {
@@ -51,6 +57,7 @@ namespace SolutiaCMS.Controllers
             }
         }
 
+        [HttpDelete]
         public HttpResponseMessage Delete(int personId)
         {
             _repository.DeletePerson(personId);
@@ -59,7 +66,8 @@ namespace SolutiaCMS.Controllers
             return response;
         }
 
-        public HttpResponseMessage Post(IPerson person)
+        [HttpPost]
+        public HttpResponseMessage Post(Person person)
         {
             try
             {
@@ -75,6 +83,14 @@ namespace SolutiaCMS.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, e.Message); //<--Generally you don't want to do this. Rather, you'd want to map the exception to a user-friendly error message and log the real exception.
             }
+        }
+
+        [HttpGet]
+        public HttpResponseMessage Search([FromUri]PersonSearchParameters parameters)
+        {
+            var people = _repository.Search(parameters);
+
+            return Request.CreateResponse(people);
         }
     }
 }

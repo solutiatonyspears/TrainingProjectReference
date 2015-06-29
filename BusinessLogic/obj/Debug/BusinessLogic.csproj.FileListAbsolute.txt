@@ -12,3 +12,10 @@ C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\bin\Debug\BusinessLogic.p
 C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\bin\Debug\DataAccess.dll
 C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\bin\Debug\DataAccess.pdb
 C:\Users\Cory Arneson\Documents\Projects\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\BusinessLogic\obj\Debug\BusinessLogic.pdb

@@ -9,6 +9,6 @@ namespace DataAccess.Interfaces
 {
     public interface IUSStatesRepository
     {
-        IList<IUSState> GetAllStates();
+        IEnumerable<IUSState> GetAllStates();
     }
 }

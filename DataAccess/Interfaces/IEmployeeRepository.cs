@@ -11,10 +11,10 @@ namespace DataAccess.Interfaces
     {
         IEmployee UpdateEmployee(IEmployee employee);
         void DeleteEmployee(int employeeId);
-        bool AddEmployeeToCompany(int employeeId, int companyId);
+        IEmployee AddPersonToCompany(int employeeId, int companyId);
         IEmployee GetEmployeeById(int employeeId);
         IEmployee RemoveEmployeeFromCompany(int employeeId, int companyId);
-        List<int> GetAllEmployeeIds(int companyId);
-        List<IEmployee> GetAllEmployees(int companyId);
+        IEnumerable<int> GetAllEmployeeIds(int companyId);
+        IEnumerable<IEmployee> GetAllEmployees(int companyId);
     }
 }

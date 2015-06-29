@@ -71,6 +71,7 @@
     <Compile Include="Mocks\MockEmployeeBusinessLogic.cs" />
     <Compile Include="Mocks\MockEmployeeRepository.cs" />
     <Compile Include="Mocks\MockPersonRepository.cs" />
+    <Compile Include="Mocks\MockProjectBusinessLogic.cs" />
     <Compile Include="Mocks\MockProjectRepository.cs" />
     <Compile Include="PeopleTests.cs" />
     <Compile Include="ProjectTests.cs" />

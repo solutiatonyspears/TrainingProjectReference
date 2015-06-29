@@ -60,3 +60,26 @@ C:\Users\Cory Arneson\Documents\Projects\SolutiaCMS\bin\System.Web.Http.WebHost.
 C:\Users\Cory Arneson\Documents\Projects\SolutiaCMS\obj\Debug\SolutiaCMS.csprojResolveAssemblyReference.cache
 C:\Users\Cory Arneson\Documents\Projects\SolutiaCMS\obj\Debug\SolutiaCMS.dll
 C:\Users\Cory Arneson\Documents\Projects\SolutiaCMS\obj\Debug\SolutiaCMS.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\SolutiaCMS.dll.config
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\SolutiaCMS.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\SolutiaCMS.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\BusinessLogic.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\DataAccess.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\Microsoft.Practices.Unity.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\Newtonsoft.Json.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\System.Net.Http.Formatting.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\System.Web.Http.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\System.Web.Http.WebHost.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\Unity.WebApi.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\BusinessLogic.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\DataAccess.pdb
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\Microsoft.Practices.Unity.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\Newtonsoft.Json.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\System.Net.Http.Formatting.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\System.Web.Http.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\bin\System.Web.Http.WebHost.xml
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\obj\Debug\SolutiaCMS.csprojResolveAssemblyReference.cache
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\obj\Debug\SolutiaCMS.dll
+C:\Users\gzann_000\Documents\Development\Solutia\SolutiaCMS-Corey\TrainingProject\SolutiaCMS\obj\Debug\SolutiaCMS.pdb

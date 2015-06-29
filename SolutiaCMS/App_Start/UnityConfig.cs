@@ -1,5 +1,6 @@
 using BusinessLogic.Company;
 using BusinessLogic.Interfaces;
+using BusinessLogic.Project;
 using DataAccess.Interfaces;
 using DataAccess.Repositories;
 using Microsoft.Practices.Unity;
@@ -31,13 +32,15 @@ namespace SolutiaCMS
 
         public static void RegisterTypes(UnityContainer container)
         {
-            container.RegisterType<IEmployeeRepository, EmployeeRepository>(new PerResolveLifetimeManager());
             container.RegisterType<ICompanyRepository, CompanyRepository>(new PerResolveLifetimeManager());
             container.RegisterType<IProjectRepository, ProjectRepository>(new PerResolveLifetimeManager());
             container.RegisterType<IPersonRepository, PersonRepository>(new PerResolveLifetimeManager());
             container.RegisterType<ICompanyBusinessLogic, CompanyBusinessLogic>(new PerResolveLifetimeManager());
             container.RegisterType<CompanyController>(new InjectionConstructor(new ResolvedParameter<ICompanyBusinessLogic>()));
-            container.RegisterType<CompanyBusinessLogic>(new InjectionConstructor(new ResolvedParameter<ICompanyRepository>(), new ResolvedParameter<IEmployeeRepository>(), new ResolvedParameter<IProjectRepository>(), new ResolvedParameter<IPersonRepository>()));
+            container.RegisterType<CompanyBusinessLogic>(new InjectionConstructor(new ResolvedParameter<ICompanyRepository>(), new ResolvedParameter<IProjectRepository>(), new ResolvedParameter<IPersonRepository>()));
+            container.RegisterType<IProjectBusinessLogic, ProjectBusinessLogic>(new PerResolveLifetimeManager());
+            container.RegisterType<ProjectBusinessLogic>(new InjectionConstructor(new ResolvedParameter<IProjectRepository>(), new ResolvedParameter<IEmployeeRepository>()));
+            container.RegisterType<ProjectController>(new InjectionConstructor(new ResolvedParameter<IProjectBusinessLogic>()));
 
         }
     }

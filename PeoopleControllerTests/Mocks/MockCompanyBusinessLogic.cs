@@ -77,7 +77,7 @@ namespace PeoopleControllerTests.Mocks
             return false;
         }
 
-        public List<int> GetAllEmployeeIds(int companyId)
+        public IEnumerable<int> GetAllEmployeeIds(int companyId)
         {
             if (companyId > 0 )
             {
@@ -92,7 +92,13 @@ namespace PeoopleControllerTests.Mocks
         }
 
 
-        public List<BusinessLogic.DTOs.PersonEmployee> GetAllEmployees(int companyId)
+        public IEnumerable<IEmployee> GetAllEmployees(int companyId)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public IEnumerable<ICompany> SearchForCompanies(DataAccess.CompanySearchParameters parameters)
         {
             throw new NotImplementedException();
         }

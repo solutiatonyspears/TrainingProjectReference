@@ -1,4 +1,7 @@
-﻿using DataAccess.DataContracts;
+﻿using BusinessLogic.Interfaces;
+using BusinessLogic.UtilityClasses;
+using DataAccess.DataContracts;
+using DataAccess.DataModels;
 using DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,18 +12,21 @@ using System.Web.Http;
 
 namespace SolutiaCMS.Controllers
 {
+    [RoutePrefix("api/project")]
     public class ProjectController : ApiController
     {
-        IProjectRepository _repository;
+        IProjectBusinessLogic _businessLogic;
 
-        public ProjectController(IProjectRepository repository)
+        public ProjectController(IProjectBusinessLogic businessLogic)
         {
-            _repository = repository;
+            _businessLogic = businessLogic;
         }
 
+        [HttpGet]
+        [Route("{projectId}")]
         public HttpResponseMessage Get(int projectId)
         {
-            var project = _repository.GetProjectById(projectId);
+            var project = _businessLogic.GetProject(projectId);
 
             if (project != null)
             {
@@ -32,16 +38,21 @@ namespace SolutiaCMS.Controllers
             }
         }
 
-        public HttpResponseMessage Post(IProject project)
+        [HttpPost]
+        public HttpResponseMessage Post(Project project)
         {
             try
             {
-                var newProject = _repository.AddProject(project);
+                var newProject = _businessLogic.CreateProject(project);
                 var response = Request.CreateResponse(HttpStatusCode.Created, newProject);
-                //string uri = Url.Link("DefaultApi", new { id = project.ProjectId });
-                //response.Headers.Location = new Uri(uri);
+                string uri = Url.Link("DefaultApi", new { id = project.ProjectId });
+                response.Headers.Location = new Uri(uri);
 
                 return response;
+            }
+            catch (ValidationException e)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, e.Data);
             }
             catch (Exception e)
             {
@@ -50,17 +61,22 @@ namespace SolutiaCMS.Controllers
             }
         }
 
-        public HttpResponseMessage Put(IProject project)
+        [HttpPut]
+        public HttpResponseMessage Put(Project project)
         {
             try
             {
-                var updatedProject = _repository.GetProjectById(project.ProjectId);
+                var updatedProject = _businessLogic.UpdateProject(project);
                 var response = Request.CreateResponse(HttpStatusCode.OK, updatedProject);
                 string uri = Url.Link("DefaultApi", new { id = project.ProjectId });
                 response.Headers.Location = new Uri(uri);
 
                 return response;
             }
+            catch(ValidationException e)
+            {
+                return Request.CreateResponse(HttpStatusCode.InternalServerError, e.Data);
+            }
             catch (Exception e)
             {
                 
@@ -68,12 +84,52 @@ namespace SolutiaCMS.Controllers
             }
         }
 
+        [HttpDelete]
+        [Route("{projectId}")]
         public HttpResponseMessage Delete(int projectId)
         {
-            _repository.DeleteProject(projectId);
-            var response = Request.CreateResponse(HttpStatusCode.OK);
+            try
+            {
+                _businessLogic.DeleteProject(projectId);
+                var response = Request.CreateResponse(HttpStatusCode.OK);
 
-            return response;
+                return response;
+            }
+            catch(Exception e)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("{projectId}/employees/{employeeId}")]
+        public HttpResponseMessage AddEmployeeToProject(int employeeId, int projectId)
+        {
+            _businessLogic.AddEmployeeToProject(projectId, employeeId);
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
+
+        [HttpDelete]
+        [Route("{projectId}/employees/{employeeId}")]
+        public HttpResponseMessage RemoveEmployeeFromProject(int employeeId, int projectId)
+        {
+            _businessLogic.RemoveEmployeeFromProject(projectId, employeeId);
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
+
+        [HttpGet]
+        [Route("{projectId}/employees/all")]
+        public HttpResponseMessage GetEmployeesForProject(int projectId)
+        {
+            var employees = _businessLogic.GetEmployeesOnProject(projectId);
+            if(employees != null)
+            {
+                return Request.CreateResponse(employees);
+            }
+            else
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Specified Project was not found.");
+            }
         }
     }
 }

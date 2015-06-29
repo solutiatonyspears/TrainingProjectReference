@@ -71,7 +71,24 @@ namespace PeoopleControllerTests.Mocks
        }
 
 
-       public List<IProject> GetProjectsForCompanyId(int companyId)
+       public IEnumerable<IProject> GetProjectsForCompanyId(int companyId)
+       {
+           throw new NotImplementedException();
+       }
+
+
+       public void AddEmployeeToProject(int employeeId, int projectId)
+       {
+           throw new NotImplementedException();
+       }
+
+       public void RemoveEmployeeFromProject(int employeeId, int projectId)
+       {
+           throw new NotImplementedException();
+       }
+
+
+       public IEnumerable<IEmployeeProjectAssignment> GetEmployeesAssignedToProject(int projectId)
        {
            throw new NotImplementedException();
        }

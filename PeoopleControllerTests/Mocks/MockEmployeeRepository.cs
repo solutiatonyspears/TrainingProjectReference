@@ -33,12 +33,12 @@ namespace PeoopleControllerTests.Mocks
             }
         };
             
-        public bool AddEmployeeToCompany(int employeeId, int companyId)
+        public IEmployee AddPersonToCompany(int employeeId, int companyId)
         {
             var employee = GetEmployeeById(employeeId);
             employee.CompanyId = companyId;
 
-            return true;
+            return employee;
         }
 
         public IEmployee GetEmployeeById(int employeeId)
@@ -61,7 +61,7 @@ namespace PeoopleControllerTests.Mocks
         }
 
 
-        public List<int> GetAllEmployeeIds(int companyId)
+        public IEnumerable<int> GetAllEmployeeIds(int companyId)
         {
             return (from e in _employees where e.CompanyId == companyId select e.EmployeeId).ToList();
         }
@@ -94,7 +94,7 @@ namespace PeoopleControllerTests.Mocks
         }
 
 
-        public List<IEmployee> GetAllEmployees(int companyId)
+        public IEnumerable<IEmployee> GetAllEmployees(int companyId)
         {
             throw new NotImplementedException();
         }

@@ -19,10 +19,10 @@ namespace BusinessLogic.Company
         private IProjectRepository _projectRepository;
         private IPersonRepository _personRepository;
 
-        public CompanyBusinessLogic(ICompanyRepository repository, IEmployeeRepository empRepository, IProjectRepository projectRepository, IPersonRepository personRepository)
+        public CompanyBusinessLogic(ICompanyRepository repository, IProjectRepository projectRepository, IPersonRepository personRepository)
         {
             _repository = repository;
-            _empRepository = empRepository;
+            _empRepository = (IEmployeeRepository)repository;
             _projectRepository = projectRepository;
             _personRepository = personRepository;
         }
@@ -85,11 +85,11 @@ namespace BusinessLogic.Company
         {
             List<string> errors = new List<string>();
 
-            if(_projectRepository.GetProjectsForCompanyId(companyId).Count != 0)
+            if(_projectRepository.GetProjectsForCompanyId(companyId).Count() != 0)
             {
                 errors.Add("Cannot delete because one or more projects are associated with this company.");
             }
-            if (_empRepository.GetAllEmployeeIds(companyId).Count != 0)
+            if (_empRepository.GetAllEmployeeIds(companyId).Count() != 0)
             {
                 errors.Add("Cannot delete because one or more employees are associated with this company.");
             }
@@ -113,7 +113,8 @@ namespace BusinessLogic.Company
         {
             List<string> errors = new List<string>();
             var employee = _empRepository.GetEmployeeById(employeeId);
-            if (employee.CompanyId != 0)
+
+            if (employee != null && employee.CompanyId != 0)
             {
                 if (employee.CompanyId != companyId)
                 {
@@ -126,7 +127,14 @@ namespace BusinessLogic.Company
                 throw e;
             }
 
-           return _empRepository.AddEmployeeToCompany(employeeId, companyId);
+           if( _empRepository.AddPersonToCompany(employeeId, companyId) != null)
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
         }
 
         public bool RemoveEmployee(int employeeId, int companyId)
@@ -139,23 +147,32 @@ namespace BusinessLogic.Company
             return false;
         }
 
-        public List<int> GetAllEmployeeIds(int companyId)
+        public IEnumerable<int> GetAllEmployeeIds(int companyId)
         {
            return _empRepository.GetAllEmployeeIds(companyId);
         }
 
 
-        public List<BusinessLogic.DTOs.PersonEmployee> GetAllEmployees(int companyId)
+        public IEnumerable<IEmployee> GetAllEmployees(int companyId)
         {
-            List<IEmployee> employees = _empRepository.GetAllEmployees(companyId);
-            List<PersonEmployee> people = new List<PersonEmployee>();
-            foreach (var e in employees)
-            {
-                var person = _personRepository.GetPersonById(e.Personid);
+            return _empRepository.GetAllEmployees(companyId)
+                .OrderBy(e => e.Person.LastName)
+                .ThenBy(e => e.Person.FirstName)
+                .ThenBy(e => e.Person.MiddleName);
+        }
 
-                people.Add(new PersonEmployee { FirstName = person.FirstName, CompanyId = e.CompanyId, EmployeeId = e.EmployeeId, HireDate = e.HireDate, IsActive = e.IsActive, LastName = person.LastName, MiddleName = person.MiddleName, Personid = person.PersonId });
-            }
-            return people;
+        public IEnumerable<ICompany> SearchForCompanies(DataAccess.CompanySearchParameters parameters)
+        {
+            var companies = _repository.Search(parameters);
+            return companies.OrderBy(c => c.Name)
+                .ThenBy(c => c.Address.StateCode)
+                .ThenBy(c => c.Address.Street1);
+        }
+
+        public IEnumerable<IProject> GetProjectsForCompany(int companyId)
+        {
+            var projects = _projectRepository.GetProjectsForCompanyId(companyId);
+            return projects.OrderBy(p => p.Name);
         }
     }
 }

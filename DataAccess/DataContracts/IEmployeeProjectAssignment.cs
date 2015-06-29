@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataAccess.DataContracts
 {
-    interface IEmployeeProjectAssignment
+    public interface IEmployeeProjectAssignment
     {
         int ProjectId { get; set; }
         int EmployeeId { get; set; }
+        IPerson Person { get; set; }
     }
 }

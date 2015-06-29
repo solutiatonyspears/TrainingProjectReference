@@ -44,6 +44,9 @@
     <Compile Include="Company\CompanyValidator.cs" />
     <Compile Include="DTOs\PersonEmployee.cs" />
     <Compile Include="Interfaces\ICompanyBusinessLogic.cs" />
+    <Compile Include="Interfaces\IProjectBusinessLogic.cs" />
+    <Compile Include="Project\ProjectBusinessLogic.cs" />
+    <Compile Include="Project\ProjectValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilityClasses\ValidationException.cs" />
   </ItemGroup>
